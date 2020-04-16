@@ -1,0 +1,12 @@
+<h1>This is the todos page</h1>
+
+<p>The date today is <%= DateTime.now.to_s(:long) %> </p>
+
+<h3> There are a total of <%= Todo.count %> todos</h3>
+
+<%= Todo.all.each do |todo| %>
+<div style="display: flex; align-items: center;">
+  <p style="color: darkblue; font-size: 32px; margin-right: 32px;"> <%= todo.todo_text %></p>
+  <p> <%= todo.date_submission %>
+</div>
+<% end %>
