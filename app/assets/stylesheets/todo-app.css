@@ -5,7 +5,12 @@
   margin: 0 auto;
   margin-top: 60px;
 }
-
+.Todo-Section-Strike {
+  text-decoration: line-through;
+}
+.Date {
+ padding-left: 8px;
+}
 .TodoPage-Title {
   font-weight: bolder;
   width: 160px;

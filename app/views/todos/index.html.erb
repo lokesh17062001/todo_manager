@@ -1,12 +1,28 @@
-<h1>This is the todos page</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>The date today is <%= DateTime.now.to_s(:long) %> </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="todo-app.css">
+  <title>Todo-Manager-Application</title>
+</head>
 
-<h3> There are a total of <%= Todo.count %> todos</h3>
+<body>
+  <main class="TodoPageHead">
+    <article>
+      <h1 class=TodoPage-Title>My To-do List</h1>
+      <section class=AddTodo>
+        <input class=AddTodo-Text type="text" placeholder="What's Next?">
+        <input class="AddTodo-Date" type="date">
+        <input class="AddTodo-Button" type="button" value="Add">
+      </section>
 
-<%= Todo.all.each do |todo| %>
-<div style="display: flex; align-items: center;">
-  <p style="color: darkblue; font-size: 32px; margin-right: 32px;"> <%= todo.todo_text %></p>
-  <p> <%= todo.date_submission %>
-</div>
-<% end %>
+    <%=render partial:"todo-section", locals:{todo_title:"Overdue",todos:Todo.overdue.notcompleted,show_date_submission: true}%>
+    <%=render partial:"todo-section", locals:{todo_title:"Due Today",todos:Todo.due_today,show_date_submission: false}%>
+    <%=render partial:"todo-section", locals:{todo_title:"Due Later",todos:Todo.due_later,show_date_submission: true}%>
+
+      </body>
+
+</html>
