@@ -20,8 +20,8 @@
           <p class="<%= todo.completed ? "Todo-Section-Strike" : ""%>">
               <%= todo.todo_text %></p>
 
-              <% if show_date_submission%>
-          <p class="Date"> <%= todo.date_submission.to_s(:short) %></p>
+              <% if show_due_date%>
+          <p class="Date"> <%= todo.due_date.to_s(:short) %></p>
           <% end %>
               <a class="TodoItem-Delete" href="javascript:void(0)">
                 <%= form_with(url: "/todos/#{todo.id}",method: "delete") do %>

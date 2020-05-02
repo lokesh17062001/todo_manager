@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   def index
-    #render plain: Todo.order(:date_submission).map { |todo| todo.to_pleasant_string }.join("\n")
+    #render plain: Todo.order(:due_date).map { |todo| todo.to_pleasant_string }.join("\n")
     render "index"
   end
 
@@ -12,10 +12,10 @@ class TodosController < ApplicationController
 
   def create
     todo_text = params[:todo_text]
-    date_submission = DateTime.parse(params[:date_submission])
+    due_date = DateTime.parse(params[:due_date])
     new_todo = Todo.create!(
       todo_text: todo_text,
-      date_submission: date_submission,
+      due_date: due_date,
       completed: false,
     )
     redirect_to todos_path

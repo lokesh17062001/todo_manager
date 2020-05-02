@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_04_19_094502) do
 
   create_table "todos", force: :cascade do |t|
     t.text "todo_text"
-    t.date "date_submission"
+    t.date "due_date"
     t.boolean "completed"
   end
 
@@ -26,5 +26,4 @@ ActiveRecord::Schema.define(version: 2020_04_19_094502) do
     t.string "email"
     t.string "password"
   end
-
 end

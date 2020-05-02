@@ -15,24 +15,24 @@
       <h1 class=TodoPage-Title>My To-do List</h1>
       <%= form_with(url: "/todos", method: "post",class: "AddTodo") do %>
         <input class="AddTodo-Text" type="text" placeholder="What's Next?" name="todo_text">
-        <input class="AddTodo-Date" type="date" name="date_submission">
+        <input class="AddTodo-Date" type="date" name="due_date">
         <input class="AddTodo-Button" type="submit" value="Add">
       <% end %>
 
       <%= render partial:"todo-section", locals: {
        todo_title:"Overdue",
        todos:Todo.overdue,
-       show_date_submission: true
+       show_due_date: true
       } %>
       <%= render partial:"todo-section", locals: {
        todo_title:"Due Today",
        todos:Todo.due_today,
-      show_date_submission: false
+      show_due_date: false
       } %>
       <%=render partial:"todo-section", locals: {
       todo_title:"Due Later",
       todos:Todo.due_later,
-      show_date_submission: true
+      show_due_date: true
      } %>
 
       </body>
