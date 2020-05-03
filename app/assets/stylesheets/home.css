@@ -20,4 +20,6 @@
   margin-top: 20px;
   margin-left: 650px;
   margin-right: 550px;
+  display: flex;
+  justify-content: space-between;
 }
