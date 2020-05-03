@@ -9,12 +9,13 @@
           <% todos.all.each do |todo| %>
             <label class="TodoItem-Container">
              <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-             <input
-                class="TodoItem-Checkbox"
-                name="completed"
-                type="checkbox" <%= todo.completed ? "checked" : "" %>
-                onclick="this.form.submit()"
-              />
+              <%=check_box_tag(
+                        name= "completed",
+                        value= "1",
+                        checked = todo.completed,
+                        options = { onclick: "this.form.submit()",
+                        class: "TodoItem-Checkbox"})
+                     %>
               <% end %>
 
           <p class="<%= todo.completed ? "Todo-Section-Strike" : ""%>">
@@ -25,7 +26,10 @@
           <% end %>
               <a class="TodoItem-Delete" href="javascript:void(0)">
                 <%= form_with(url: "/todos/#{todo.id}",method: "delete") do %>
-                  <input type='image' class="TodoItem-Trashbin" src="trash.png">
+                  <%= image_submit_tag( source="trash.png",
+                                 class: "TodoItem-Trashbin",
+                                 alt: "deleteicon")
+                              %>
                 <% end %>
               </a>
             </label>
