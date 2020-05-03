@@ -1,5 +1,4 @@
-class User < ActiveRecord::Base
-  def to_displayed
-    "#{id}. #{name} #{email} #{password}"
-  end
+class User < ApplicationRecord
+  has_secure_password
+  has_many :todos
 end
