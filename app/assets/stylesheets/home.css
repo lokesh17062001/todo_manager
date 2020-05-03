@@ -13,3 +13,11 @@
   font-size: 40px;
   color: rgb(136, 53, 53);
 }
+.UserHeader {
+  padding: 10px;
+  background-color:lightgray;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 650px;
+  margin-right: 550px;
+}
