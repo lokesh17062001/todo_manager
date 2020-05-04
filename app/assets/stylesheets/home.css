@@ -26,7 +26,3 @@
   width: max-content;
   display: flex;
 }
-
-.class {
-  background-image: url(<%= asset_path 'trash.png' %>)
-}
