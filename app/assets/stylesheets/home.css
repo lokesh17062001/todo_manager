@@ -17,9 +17,7 @@
   padding: 10px;
   background-color:lightgray;
   font-size: 14px;
-  margin-top: 20px;
-  margin-left: 650px;
-  margin-right: 550px;
+  margin: 0;
   display: flex;
   justify-content: space-between;
 }
