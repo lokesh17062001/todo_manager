@@ -1,4 +1,4 @@
-<p class="NewUsers-title">Signin!</p>
+<p class="NewUsers-title">Welcome</p>
 <section class="UsersNew">
 <%= form_with url: sessions_path do |form|%>
   <div class="Form-section">
@@ -14,3 +14,4 @@
   </div>
 <% end %>
 </section>
+<h3 class="change">If you dont have an account <%= link_to "Sign up", new_user_path %> here</h3>

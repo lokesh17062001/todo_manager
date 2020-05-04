@@ -1,15 +1,14 @@
 .Home{
   margin: auto;
   width: max-content;
-  margin-top: 80px;
 }
 .Home-authenticate{
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 20px;
   margin-left: 30px;
 }
 .Home-title{
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 40px;
   color: rgb(136, 53, 53);
 }
@@ -17,7 +16,17 @@
   padding: 10px;
   background-color:lightgray;
   font-size: 14px;
-  margin: 0;
+  margin: auto;
   display: flex;
   justify-content: space-between;
+}
+.Flash-error {
+  color: darkred;
+  margin: auto;
+  width: max-content;
+  display: flex;
+}
+
+.class {
+  background-image: url(<%= asset_path 'trash.png' %>)
 }

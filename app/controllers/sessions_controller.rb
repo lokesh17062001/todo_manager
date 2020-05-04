@@ -10,8 +10,12 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to "/"
     else
-      render plain: "Incorrect pasword"
+      flash[:error] = "Please check your email and password you entered"
+      redirect_to new_sessions_path
     end
+  end
+
+  def show
   end
 
   def destroy

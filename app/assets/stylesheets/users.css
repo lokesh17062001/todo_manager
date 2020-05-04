@@ -25,4 +25,9 @@
   background-color: rgb(95, 133, 95);
   border: 0;
   border-radius: 8px;
+  margin-bottom: 20px;
+}
+.change {
+  margin: auto;
+  width: max-content;
 }
