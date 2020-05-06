@@ -9,13 +9,10 @@
           <% todos.all.each do |todo| %>
             <label class="TodoItem-Container">
              <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-              <%=check_box_tag(
-                        name= "completed",
-                        value= "1",
-                        checked = todo.completed,
-                        options = { onclick: "this.form.submit()",
-                        class: "TodoItem-Checkbox"})
-                     %>
+              <%= check_box_tag( "completed", "1",
+                   todo.completed,
+                   class: "TodoItem-Checkbox",
+                   onclick: "this.form.submit()" ) %>
               <% end %>
 
           <p class="<%= todo.completed ? "Todo-Section-Strike" : ""%>">
