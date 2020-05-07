@@ -11,10 +11,12 @@
 
   <body>
     <% if @current_user %>
-    <p class="UserHeader">
-      Welcome <%= @current_user.first_name %>
-      <%= link_to "Sign-out", destroy_session_path, method: "delete"%>
-    </p>
+     <div class="UserHeader">
+        Welcome <%= @current_user.first_name %>!
+        <p class="signout_heading">
+          <%= link_to "Sign out", destroy_session_path, method:"delete", class:"links" %>
+        </p>
+      </div>
     <% end %>
 
     <% if flash[:error] %>
