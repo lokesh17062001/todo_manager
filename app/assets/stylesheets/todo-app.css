@@ -4,6 +4,7 @@
   max-height: 517px;
   margin: 0 auto;
   margin-top: 60px;
+  width: 100%;
 }
 .Todo-Section-Strike {
   text-decoration: line-through;
