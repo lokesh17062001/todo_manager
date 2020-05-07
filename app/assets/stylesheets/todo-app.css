@@ -152,13 +152,11 @@
 }
 .UserHeader {
 
-  max-width: 700px;
-  margin:0 auto;
-  margin-top:30px;
-  padding:10px;
+  padding: 10px;
   background-color:lightgray;
-  display:flex;
-  align-items:center;
+  font-size: 14px;
+  margin: auto;
+  display: flex;
   justify-content: space-between;
 }
 .links{
