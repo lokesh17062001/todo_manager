@@ -12,14 +12,7 @@
   font-size: 50px;
   color: rgb(136, 53, 53);
 }
-.UserHeader {
-  padding: 10px;
-  background-color:lightgray;
-  font-size: 14px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
+
 .Flash-error {
   color: darkred;
   margin: auto;
