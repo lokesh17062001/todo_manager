@@ -1,8 +1,8 @@
 <section class=TodoSection>
         <div class="TodoSectionTitle">
-          <p class="TodoSectionTitle-text"><%=todo_title%></p>
+          <p class="TodoSectionTitle-text"> <%= todo_title %> </p>
           <p class="TodoSectionTitle-RemainingCount">
-          <%= todos.completed.count %>/<%= todos.count %></p>
+          <%= todos.completed.count %> / <%= todos.count %> </p>
         </div>
         <ul>
           <li class="TodoItem">
@@ -15,11 +15,11 @@
                    onclick: "this.form.submit()" ) %>
               <% end %>
 
-          <p class="<%= todo.completed ? "Todo-Section-Strike" : ""%>">
-              <%= todo.todo_text %></p>
+          <p class=" <%= todo.completed ? "Todo-Section-Strike" : ""%> ">
+              <%= todo.todo_text %> </p>
 
-              <% if show_due_date%>
-          <p class="Date"> <%= todo.due_date.to_s(:short) %></p>
+              <% if show_due_date %>
+          <p class="Date"> <%= todo.due_date.to_s(:short) %> </p>
           <% end %>
               <a class="TodoItem-Delete" href="javascript:void(0)">
                 <%= form_with(url: "/todos/#{todo.id}",method: "delete") do %>
